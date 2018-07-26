@@ -2,14 +2,13 @@
 
 From Chapter 6 Memory and Concurrency of **Java in a Nutshell: A Quick Desktop Reference** by Benjamin. J. Evans & David Flanagan:
 ```
-Acquiring the monitor does not prevent access to the object. 
-It only prevents any other thread from claiming the lock.
+Acquiring the monitor does not prevent access to the object. It only prevents any other thread
+from claiming the lock.
 ```
 ```
-If a synchronized method is working on an object and has
-placed it into an illegal state, and another method
-(which is not synchronized) reads from the object
-it can still see the inconsistent state.
+If a synchronized method is working on an object and has placed it into an illegal state, 
+and another method (which is not synchronized) reads from the object it can still see 
+the inconsistent state.
 ```
 
 Making Account::getBalance a synchronized method will prevent other threads from seeing the account's inconsistent state.
